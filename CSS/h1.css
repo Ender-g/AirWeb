@@ -75,7 +75,7 @@
     box-shadow: rgb(65, 133, 252) 0px 10px 0px 0px;
 }
 .nav>.item>a { 
-    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 .nav>.item:hover>a {
     transform: scale(1.5);

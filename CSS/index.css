@@ -100,7 +100,7 @@
     padding: 50px;
     width: 1000px;
     min-width: 1000px;
-    height: 700px;
+    height: 600px;
     position: absolute;
     top: 150px;
     left: 50%;
@@ -126,7 +126,7 @@
 .main-box:hover {
     box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 50px 0px;
     width: 1050px;
-    height: 750px;
+    height: 650px;
     top: 125px;
 }
 
@@ -142,6 +142,6 @@
 }
 
 .grid-item>img {
-    margin: 30px;
+    margin: 10px;
     height: 130px
 }
