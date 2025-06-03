@@ -57,7 +57,7 @@
 }
 
 .top-box-left {
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -78,8 +78,6 @@
 }
 
 .search-input {
-    /* width: 190px;
-    height: 254px; */
     color: #292F39;
     background: rgb(255, 255, 255);
     border-radius: 0.4em;
@@ -141,5 +139,5 @@
 
 .grid-item>img {
     margin: 30px; 
-    width: 150px
+    height: 130px
 }

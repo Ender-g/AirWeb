@@ -1,7 +1,9 @@
 /* From www.lingdaima.com */
 
 .btn-1 {
-  width: 130px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: auto;
   height: 40px;
   font-size: 1.1em;
   cursor: pointer;
