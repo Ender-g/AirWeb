@@ -1,23 +1,8 @@
-/* 背景===================================================================================================================== */
-.bg {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.bg>img {
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
 /* 顶部=============================================================================================================== */
 .top-box-1 {
     height: 70px;
     width: 98%;
-    min-width: 1000px;
+    min-width: 1200px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     position: absolute;
@@ -53,20 +38,34 @@
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .top-box-left {
     width: 40%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px ;
+}
+
+.top-box-middle {
+    width: 20%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
+.top-box-middle:hover  {
+    /* 箭头*/
+    cursor: pointer;
+}
+
 .top-box-right {
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .logo>img {
@@ -79,6 +78,7 @@
 }
 
 .search-input {
+    padding-left: 10px;
     color: #292F39;
     background: rgb(255, 255, 255);
     border-radius: 0.4em;
@@ -110,8 +110,8 @@
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 30px;
     /*  背景模糊 */
-    background-color: rgba(89, 89, 89, 0.3);
-    backdrop-filter: blur(4.5px);
+    background-color: rgba(89, 89, 89, 0.1);
+    backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(4.5px);
     border: 0px solid rgba(255, 255, 255, 0.18);
     box-shadow: rgba(14, 14, 14, 0.19) 0px 6px 15px 0px;
@@ -125,6 +125,9 @@
 
 .main-box:hover {
     box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 50px 0px;
+    width: 1050px;
+    height: 750px;
+    top: 125px;
 }
 
 .grid-item {
@@ -139,6 +142,6 @@
 }
 
 .grid-item>img {
-    margin: 30px; 
+    margin: 30px;
     height: 130px
 }

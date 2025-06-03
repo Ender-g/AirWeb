@@ -22,3 +22,18 @@ a {
     font-family: 'MyFont';
     src: url('../SmileySans-Oblique-2.ttf') format('truetype');
 }
+
+/* 背景===================================================================================================================== */
+.bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.bg>img {
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
