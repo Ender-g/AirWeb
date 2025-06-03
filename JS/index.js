@@ -4,7 +4,6 @@ window.onload = function () {
 };
 
 function updateTime() {
-
     const now = new Date();
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     document.getElementById('current-date').textContent = now.toLocaleDateString('zh-CN', options);

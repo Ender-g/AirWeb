@@ -46,17 +46,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 50px ;
+    padding-right: 50px;
 }
 
 .top-box-middle {
     width: 20%;
     display: flex;
     justify-content: center;
+    flex-direction: column-reverse;
     align-items: center;
 }
 
-.top-box-middle:hover  {
+.top-box-middle:hover {
     /* 箭头*/
     cursor: pointer;
 }

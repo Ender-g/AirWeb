@@ -74,9 +74,11 @@
     max-height: 100vh;
     box-shadow: rgb(65, 133, 252) 0px 10px 0px 0px;
 }
-.nav>.item>a { 
+
+.nav>.item>a {
     transition: all 0.1s ease-in-out;
 }
+
 .nav>.item:hover>a {
     transform: scale(1.5);
     color: yellow;
@@ -91,3 +93,31 @@ a {
 }
 
 /* 中部轮播图========================================================================================================= */
+
+.show-box {
+    width: 60%;
+    min-width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.half-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 
+
+*/
+.half-box:nth-child(1) {
+    width: 40%;
+}
+
+.half-box:nth-child(2) {
+    width: 60%;
+}

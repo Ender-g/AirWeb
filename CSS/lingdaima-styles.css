@@ -55,3 +55,16 @@
   box-shadow: rgba(200, 255, 0, 0.5) 0px 0px 20px 0px;
   border-radius: 1rem;
 }
+
+/* From www.lingdaima.com */
+.card-2 {
+  background: rgba( 42, 47, 56, 0.5);
+  border-radius: 1em;
+  transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: rgba( 42, 47, 56, 0.5) 0.2em solid;
+}
+
+.card-2:hover {
+  border: #ffffff 0.2em solid;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 20px 0px;
+}
