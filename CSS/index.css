@@ -26,6 +26,7 @@
     background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
     border-radius: 20px;
     transition: all .3s;
+    z-index: 9;
 }
 
 .top-box-2 {
@@ -116,8 +117,14 @@
     box-shadow: rgba(14, 14, 14, 0.19) 0px 6px 15px 0px;
     -webkit-box-shadow: rgba(14, 14, 14, 0.19) 0px 6px 15px 0px;
     border-radius: 9px;
-    -webkit-border-radius: 9px;
+    -webkit-border-radius: 50px;
     color: rgb(128, 128, 128);
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-box:hover  {
+   box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 50px 0px;
 }
 
 .grid-item {
