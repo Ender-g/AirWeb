@@ -17,7 +17,7 @@
 .top-box-1 {
     height: 70px;
     width: 98%;
-    min-width: 1200px;
+    min-width: 1000px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     position: absolute;
@@ -99,7 +99,7 @@
 /* 主体 =====================================================================================*/
 .main-box {
     padding: 50px;
-    width: 70%;
+    width: 1000px;
     min-width: 1000px;
     height: 700px;
     position: absolute;
