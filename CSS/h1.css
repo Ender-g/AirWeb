@@ -1,3 +1,24 @@
+.title-text {
+    height: 70px;
+    width: 200px;
+    margin: 0 auto;
+    font-size: 30px;
+    color: yellow;
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 过度 */
+    transition: all 0.5s ease-in-out;
+}
+
+.title-text:hover {
+    /* 手形 */
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
 /* 顶部导航栏=================================================================== */
 .top-box {
     background-color: rgba(0, 0, 0, 0.5);
@@ -100,7 +121,6 @@ a {
     min-width: 800px;
     height: 600px;
     margin: 0 auto;
-    margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -121,7 +141,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .left-box>div>div {
@@ -165,11 +185,30 @@ a {
 
 .right-box {
     position: relative;
-    background-color: #124B91;
     width: 50%;
     height: 90%;
     margin: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.right-box>.img-box {
+    width: 100%;
+    height: 100%;
+}
+
+.right-box>.img-box>a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.right-box>.img-box>a>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 圆角 */
+    border-radius: 20px;
 }
