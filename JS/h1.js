@@ -9,10 +9,14 @@ window.onload = function () {
     console.log(data);
     request = null;
 
-    let img = document.getElementById('one_by_one_img');
-    let left_box = document.getElementById('show-box-left');
-    let left_btn = document.getElementById('switch-left-btn');
-    let right_btn = document.getElementById('switch-right-btn');
+    let img = document.getElementById('one_by_one_img'); // 图片
+    let left_box = document.getElementById('show-box-left'); // 左盒子
+    let left_btn = document.getElementById('switch-left-btn'); // 左边按钮
+    let right_btn = document.getElementById('switch-right-btn'); // 右边按钮
+    imgurls = [];
+    for (let i = 0; i < data.length; i++) {
+        imgurls.push(data[i].imgurl);
+    }
 
     let index = 0; // 索引
     let timer = null; // 定时器
@@ -28,10 +32,11 @@ window.onload = function () {
         <div><span>导演：</span>${data[0].导演}</div>
         <div><span>编剧：</span>${data[0].编剧}</div>
         `;
+
     // 自动播放
     autoPlay();
 
-    // 鼠标移入移出暂停播放
+    // 鼠标移入暂停
     img.onmouseover = function () {
         clearInterval(timer);
     }
@@ -53,26 +58,19 @@ window.onload = function () {
     right_btn.onmouseover = function () {
         clearInterval(timer);
     }
-    left_btn.onmouseout = function () {
+    right_btn.onmouseout = function () {
         autoPlay();
     }
-
 
     // 点击左右按钮切换图片
     left_btn.onclick = function () {
         clearInterval(timer);
-        index--;
-        if (index < 0) {
-            index = data.length - 1;
-        }
+        index == 0 ? index = data.length - 1 : index--;
         play();
     }
     right_btn.onclick = function () {
         clearInterval(timer);
-        index++;
-        if (index > data.length - 1) {
-            index = 0;
-        }
+        index == data.length - 1 ? index = 0 : index++;
         play();
     }
 
@@ -80,11 +78,10 @@ window.onload = function () {
     function autoPlay() {
         timer = setInterval(
             function () {
-                index > data.length - 2 ? index = 0 : index++;
+                index == data.length - 1 ? index = 0 : index++;
                 play();
-                console.log(index);
             }
-            , 3000);
+            , 2000);
     }
 
     // 切换内容方法
@@ -100,5 +97,4 @@ window.onload = function () {
         <div><span>编剧：</span>${data[index].编剧}</div>
         `;
     }
-
 };
