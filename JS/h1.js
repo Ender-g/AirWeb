@@ -1,6 +1,6 @@
 const jsonurl = "../JSON/popular_movies.json"
 var request = new XMLHttpRequest();
-request.open("GET", jsonurl, true);
+request.open("GET", jsonurl, false);
 request.send(null);
 
 window.onload = function () {
