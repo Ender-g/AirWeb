@@ -58,13 +58,54 @@
 
 /* From www.lingdaima.com */
 .card-2 {
-  background: rgba( 42, 47, 56, 0.5);
+  background: rgba(42, 47, 56, 0.5);
   border-radius: 1em;
   transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: rgba( 42, 47, 56, 0.5) 0.2em solid;
+  border: rgba(42, 47, 56, 0.5) 0.2em solid;
 }
 
 .card-2:hover {
   border: #ffffff 0.2em solid;
   box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 20px 0px;
+}
+
+/* From www.lingdaima.com */
+.card-3 {
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all .3s;
+}
+
+.card-3-2 {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  transition: all .2s;
+}
+
+.card-3-2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card-3:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+/* From www.lingdaima.com */
+.card-4 {
+ width: 200px;
+ height: 260px;
+ background-color: #212121;
+ box-shadow: 15px 15px 30px #191919,
+              -15px -15px 30px #292929;
+ transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+              transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.card-4:hover {
+ border-bottom-right-radius: 50px;
+ border-top-left-radius: 50px;
+ transform: scale(1.05);
 }
