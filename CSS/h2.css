@@ -1,4 +1,4 @@
-/* 顶部导航栏*/
+/* 顶部导航栏=================================================================== */
 .top-box {
     background-color: rgba(0, 0, 0, 0.5);
     height: 70px;
@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .logo {
     width: 100px;
     height: 100%;
@@ -15,6 +16,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .logo img {
     height: 30px;
     transition: 0.5s;
@@ -25,6 +27,7 @@
     box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 50px 0px;
     cursor: pointer;
 }
+
 .nav {
     width: 60%;
     height: 100%;
@@ -63,9 +66,6 @@
     transition: all 0.1s ease-in-out;
 }
 
-.nav>.item:hover {
-    background-color: #124B91;
-}
 
 .nav>.item:hover>.list {
     border-radius: 0 0 10px 10px;
@@ -90,6 +90,7 @@ a {
     background-color: #124B91;
 }
 
+
 .show-box {
     width: 90%;
     min-width: 800px;
@@ -107,10 +108,10 @@ a {
     width: 90%;
     height: 90%;
     display: grid;
-    grid-template-columns: 4fr 3fr 2fr 1fr 2.5fr; 
-    grid-template-rows: 1fr 1.5fr 2fr ; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr ; 
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
      overflow: cover; /* 防止内容溢出 */
     grid-template-areas: 'a b d d f '
                          'a b e h h ' 
@@ -124,10 +125,10 @@ a {
     align-items: center;
     justify-content: center;
     overflow: hidden; /* 防止图片溢出 */
+transition: all 0.1s ease-in-out;
 }
 .item:hover {
-    transform: scale(1.1);
-    color: skyblue;
+    transform: scale(0.95);
     cursor: pointer;
 }
 
@@ -137,6 +138,7 @@ a {
     object-fit: cover; /* 填满容器并保持比例 */
     display: block; /* 去除 inline 元素默认的空白间隙 */
     border-radius: 8px;
+    object-fit: cover;
 }
 .item:nth-child(1){
     grid-area: a;
