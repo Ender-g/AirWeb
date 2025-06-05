@@ -8,32 +8,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
-.show-box>div { 
+
+.show-box>div {
     width: 90%;
     height: 90%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr ; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
     gap: 10px;
-    overflow: cover; /* 防止内容溢出 */
-    
-    position: relative;
+    overflow: cover;
+    /* 防止内容溢出 */
+
+    /* position: relative; */
     grid-template-areas: 'a b d d f '
-                         'a b e h h ' 
-                         'a c e h h ' ;
+        'a b e h h '
+        'a c e h h ';
 }
+
 .show-box>div>.item {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* 防止图片溢出 */
-transition: all 0.1s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    /* 防止图片溢出 */
+    transition: all 0.1s ease-in-out;
 }
+
 .show-box>div>.item:hover {
     transform: scale(0.95);
     cursor: pointer;
@@ -42,49 +48,76 @@ transition: all 0.1s ease-in-out;
 .show-box>div>.item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 填满容器并保持比例 */
-    display: block; /* 去除 inline 元素默认的空白间隙 */
-    border-radius: 8px;
     object-fit: cover;
+    /* 填满容器并保持比例 */
+    display: block;
+    /* 去除 inline 元素默认的空白间隙 */
+    border-radius: 8px;
 }
-.show-box>div>.item:nth-child(1){
+
+.show-box>div>.item:nth-child(1) {
     grid-area: a;
-    
+
 }
-.show-box>div>.item:nth-child(2){
+
+.show-box>div>.item:nth-child(2) {
     grid-area: b;
 }
-.show-box>div>.item:nth-child(3){
+
+.show-box>div>.item:nth-child(3) {
     grid-area: c;
 }
-.show-box>div>.item:nth-child(4){
+
+.show-box>div>.item:nth-child(4) {
     grid-area: d;
 }
-.show-box>div>.item:nth-child(5){
+
+.show-box>div>.item:nth-child(5) {
     grid-area: e;
 }
-.show-box>div>.item:nth-child(6){
+
+.show-box>div>.item:nth-child(6) {
     grid-area: f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.show-box>div>.item:nth-child(7){
+
+.show-box>div>.item:nth-child(6)>.grid-btn {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.show-box>div>.item:nth-child(7) {
     grid-area: h;
 }
-.donghuadiv {
+
+.brief {
     width: 100%;
-    height: 30px;
+    height:100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: #ffffff;
     font-size: 19px;
+    padding: 5px;
     display: flex;
     align-items: center;
     padding-left: 10px;
-    bottom: -30px;
+    bottom: -100%;
+      border-radius: 8px;
     position: absolute;
     transition: all 0.2s ease-in-out;
-    opacity: 0; /* 默认隐藏 */
+
+    /* opacity: 0;
+    默认隐藏 */
 }
 
-.item:hover .donghuadiv {
+.item:hover .brief {
     bottom: 0;
-    opacity: 1; /* 鼠标悬停时显示 */
+    /* opacity: 1; */
+    /* 鼠标悬停时显示 */
 }
