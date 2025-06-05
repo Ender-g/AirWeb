@@ -1,24 +1,3 @@
-.title-text {
-    height: 70px;
-    width: 200px;
-    margin: 0 auto;
-    font-size: 30px;
-    color: yellow;
-    font-weight: bold;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* 过度 */
-    transition: all 0.5s ease-in-out;
-}
-
-.title-text:hover {
-    /* 手形 */
-    cursor: pointer;
-    transform: scale(1.5);
-}
-
 /* 中部轮播图========================================================================================================= */
 
 .show-box {

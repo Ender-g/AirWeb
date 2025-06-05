@@ -40,7 +40,27 @@ a {
     object-fit: cover;
     z-index: -1;
 }
+/* 标题============================================================================ */
+.title-text {
+    height: 70px;
+    width: 200px;
+    margin: 0 auto;
+    font-size: 30px;
+    color: yellow;
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 过度 */
+    transition: all 0.5s ease-in-out;
+}
 
+.title-text:hover {
+    /* 手形 */
+    cursor: pointer;
+    transform: scale(1.5);
+}
 /* 顶部导航栏=================================================================== */
 .top-box {
     background-color: rgba(0, 0, 0, 0.5);
