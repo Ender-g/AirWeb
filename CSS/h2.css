@@ -11,7 +11,6 @@
     
 }
 .show-box>div { 
-    
     width: 90%;
     height: 90%;
     display: grid;
@@ -23,9 +22,8 @@
     grid-template-areas: 'a b d d f '
                          'a b e h h ' 
                          'a c e h h ' ;
-
 }
-.item {
+.show-box>div>.item {
     width: 100%;
     height: 100%;
     display: flex;
@@ -34,12 +32,12 @@
     overflow: hidden; /* 防止图片溢出 */
 transition: all 0.1s ease-in-out;
 }
-.item:hover {
+.show-box>div>.item:hover {
     transform: scale(0.95);
     cursor: pointer;
 }
 
-.item img {
+.show-box>div>.item img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* 填满容器并保持比例 */
@@ -47,25 +45,25 @@ transition: all 0.1s ease-in-out;
     border-radius: 8px;
     object-fit: cover;
 }
-.item:nth-child(1){
+.show-box>div>.item:nth-child(1){
     grid-area: a;
     
 }
-.item:nth-child(2){
+.show-box>div>.item:nth-child(2){
     grid-area: b;
 }
-.item:nth-child(3){
+.show-box>div>.item:nth-child(3){
     grid-area: c;
 }
-.item:nth-child(4){
+.show-box>div>.item:nth-child(4){
     grid-area: d;
 }
-.item:nth-child(5){
+.show-box>div>.item:nth-child(5){
     grid-area: e;
 }
-.item:nth-child(6){
+.show-box>div>.item:nth-child(6){
     grid-area: f;
 }
-.item:nth-child(7){
+.show-box>div>.item:nth-child(7){
     grid-area: h;
 }
