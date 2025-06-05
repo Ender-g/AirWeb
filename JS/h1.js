@@ -37,18 +37,18 @@ window.onload = function () {
     autoPlay();
 
     // 鼠标移入暂停
-    img.onmouseover = function () {
-        clearInterval(timer);
-    }
-    img.onmouseout = function () {
-        autoPlay();
-    }
-    left_box.onmouseover = function () {
-        clearInterval(timer);
-    }
-    left_box.onmouseout = function () {
-        autoPlay();
-    }
+    // img.onmouseover = function () {
+    //     clearInterval(timer);
+    // }
+    // img.onmouseout = function () {
+    //     autoPlay();
+    // }
+    // left_box.onmouseover = function () {
+    //     clearInterval(timer);
+    // }
+    // left_box.onmouseout = function () {
+    //     autoPlay();
+    // }
     left_btn.onmouseover = function () {
         clearInterval(timer);
     }
@@ -80,8 +80,8 @@ window.onload = function () {
             function () {
                 index == data.length - 1 ? index = 0 : index++;
                 play();
-            }
-            , 2000);
+                console.log(index);
+            }, 2000);
     }
 
     // 切换内容方法
