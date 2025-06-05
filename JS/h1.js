@@ -1,76 +1,98 @@
-const jsonurl = "../JSON/popular_movies.json"
-var request = new XMLHttpRequest();
+let jsonurl; // json文件路径
+
+// 请求热门电影轮播图json文件
+jsonurl = "../JSON/popular_movies.json"
+request = new XMLHttpRequest();
 request.open("GET", jsonurl, false);
 request.send(null);
+data_popular_movies = JSON.parse(request.responseText);
+// console.log(data_popular_movies);
+request = null;
+
+// 请求top10电影列表json文件
+jsonurl = "../JSON/top10.json"
+request = new XMLHttpRequest();
+request.open("GET", jsonurl, false);
+request.send(null);
+var data_top10_list = JSON.parse(request.responseText);
+// console.log(data_top10_list);
+request = null;
 
 window.onload = function () {
-    // 解析json
-    let data = JSON.parse(request.responseText);
-    console.log(data);
-    request = null;
+    // top10电影列表
+    let top10_half_1 = document.getElementById('top10-half-1');
+    let top10_half_2 = document.getElementById('top10-half-2');
+    console.log(top10_half_1, top10_half_2);
 
-    let img = document.getElementById('one_by_one_img'); // 图片
-    let left_box = document.getElementById('show-box-left'); // 左盒子
-    let left_btn = document.getElementById('switch-left-btn'); // 左边按钮
-    let right_btn = document.getElementById('switch-right-btn'); // 右边按钮
-    imgurls = [];
-    for (let i = 0; i < data.length; i++) {
-        imgurls.push(data[i].imgurl);
+    top10_half_1.innerHTML = generateTop10HTML(data_top10_list, 0, 5);
+    top10_half_2.innerHTML = generateTop10HTML(data_top10_list, 5, 10);
+
+    function generateTop10HTML(data, startIndex, endIndex) {
+        let html = '';
+        for (let i = startIndex; i < endIndex && i < data.length; i++) {
+            html += `
+        <div class="about-top10 card-2">
+          <div class="title">Top${i + 1}</div>
+          <div class="card-1 img-box">
+            <img src="${data[i].imgurl}" alt="" />
+          </div>
+          <div class="text-box">
+            <div><span>电影名称：</span>${data[i].电影名称}</div>
+            <div><span>标签：</span>${data[i].标签}</div>
+            <div><span>上映日期：</span>${data[i].上映时间}</div>
+          </div>
+        </div>
+        `;
+        }
+        return html;
     }
+    // 轮播图
+    let popular_movies_img = document.getElementById('one_by_one_img'); // 图片
+    let popular_movies_left_box = document.getElementById('show-box-left'); // 左盒子
+    let popular_movies_left_btn = document.getElementById('switch-left-btn'); // 左边按钮
+    let popular_movies_right_btn = document.getElementById('switch-right-btn'); // 右边按钮
 
     let index = 0; // 索引
     let timer = null; // 定时器
 
     // 播放第一张图片
-    img.src = data[0].imgurl;
-    left_box.innerHTML = `
-        <div><span>电影名称：</span>${data[0].电影名称}</div>
-        <div><span>标签：</span>${data[0].标签}</div>
-        <div><span>上映日期：</span>${data[0].上映日期}</div>
-        <div><span>简介：</span>${data[0].简介}</div>
-        <div><span>演员：</span>${data[0].演员}</div>
-        <div><span>导演：</span>${data[0].导演}</div>
-        <div><span>编剧：</span>${data[0].编剧}</div>
+    popular_movies_img.src = data_popular_movies[0].imgurl;
+    popular_movies_left_box.innerHTML = `
+        <div><span>电影名称：</span>${data_popular_movies[0].电影名称}</div>
+        <div><span>标签：</span>${data_popular_movies[0].标签}</div>
+        <div><span>上映日期：</span>${data_popular_movies[0].上映日期}</div>
+        <div><span>简介：</span>${data_popular_movies[0].简介}</div>
+        <div><span>演员：</span>${data_popular_movies[0].演员}</div>
+        <div><span>导演：</span>${data_popular_movies[0].导演}</div>
+        <div><span>编剧：</span>${data_popular_movies[0].编剧}</div>
         `;
 
     // 自动播放
     autoPlay();
 
-    // 鼠标移入暂停
-    // img.onmouseover = function () {
-    //     clearInterval(timer);
-    // }
-    // img.onmouseout = function () {
-    //     autoPlay();
-    // }
-    // left_box.onmouseover = function () {
-    //     clearInterval(timer);
-    // }
-    // left_box.onmouseout = function () {
-    //     autoPlay();
-    // }
-    left_btn.onmouseover = function () {
+    // 鼠标移入按钮暂停
+    popular_movies_left_btn.onmouseover = function () {
         clearInterval(timer);
     }
-    left_btn.onmouseout = function () {
+    popular_movies_left_btn.onmouseout = function () {
         autoPlay();
     }
-    right_btn.onmouseover = function () {
+    popular_movies_right_btn.onmouseover = function () {
         clearInterval(timer);
     }
-    right_btn.onmouseout = function () {
+    popular_movies_right_btn.onmouseout = function () {
         autoPlay();
     }
 
     // 点击左右按钮切换图片
-    left_btn.onclick = function () {
+    popular_movies_left_btn.onclick = function () {
         clearInterval(timer);
-        index == 0 ? index = data.length - 1 : index--;
+        index == 0 ? index = data_popular_movies.length - 1 : index--;
         play();
     }
-    right_btn.onclick = function () {
+    popular_movies_right_btn.onclick = function () {
         clearInterval(timer);
-        index == data.length - 1 ? index = 0 : index++;
+        index == data_popular_movies.length - 1 ? index = 0 : index++;
         play();
     }
 
@@ -78,23 +100,22 @@ window.onload = function () {
     function autoPlay() {
         timer = setInterval(
             function () {
-                index == data.length - 1 ? index = 0 : index++;
+                index == data_popular_movies.length - 1 ? index = 0 : index++;
                 play();
-                console.log(index);
             }, 2000);
     }
 
     // 切换内容方法
     function play() {
-        img.src = data[index].imgurl;
-        left_box.innerHTML = `
-        <div><span>电影名称：</span>${data[index].电影名称}</div>
-        <div><span>标签：</span>${data[index].标签}</div>
-        <div><span>上映日期：</span>${data[index].上映日期}</div>
-        <div><span>简介：</span>${data[index].简介}</div>
-        <div><span>演员：</span>${data[index].演员}</div>
-        <div><span>导演：</span>${data[index].导演}</div>
-        <div><span>编剧：</span>${data[index].编剧}</div>
+        popular_movies_img.src = data_popular_movies[index].imgurl;
+        popular_movies_left_box.innerHTML = `
+        <div><span>电影名称：</span>${data_popular_movies[index].电影名称}</div>
+        <div><span>标签：</span>${data_popular_movies[index].标签}</div>
+        <div><span>上映日期：</span>${data_popular_movies[index].上映日期}</div>
+        <div><span>简介：</span>${data_popular_movies[index].简介}</div>
+        <div><span>演员：</span>${data_popular_movies[index].演员}</div>
+        <div><span>导演：</span>${data_popular_movies[index].导演}</div>
+        <div><span>编剧：</span>${data_popular_movies[index].编剧}</div>
         `;
     }
 };

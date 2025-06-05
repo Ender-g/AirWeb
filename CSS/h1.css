@@ -127,3 +127,67 @@
     /* 放大 */
     transform: scale(1.3);
 }
+
+.top10-box {
+    width: 1000px;
+    height: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.top10-half {
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-top10 {
+    height: 200px;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-top10>.title {
+    width: 70px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about-top10>.img-box {
+    height: 100%;
+    margin-left: 10px;
+}
+
+.about-top10>.img-box>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.about-top10>.text-box {
+    padding: 10px;
+    margin-left: 10px;
+    height: 100%;
+    width: 230px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-top10>.text-box>div>span {
+    font-weight: bold;
+    color: yellow;
+}
