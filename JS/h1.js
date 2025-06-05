@@ -46,6 +46,7 @@ window.onload = function () {
         }
         return html;
     }
+
     // 轮播图
     let popular_movies_img = document.getElementById('one_by_one_img'); // 图片
     let popular_movies_left_box = document.getElementById('show-box-left'); // 左盒子
