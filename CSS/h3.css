@@ -1,0 +1,66 @@
+.buytickets_box {
+    width: 90%;
+    min-width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    background-color: rgba(89, 89, 89, 0.15);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 0.8px solid rgba(255, 255, 255, 0.18);
+    box-shadow: rgba(14, 14, 14, 0.19) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(14, 14, 14, 0.19) 0px 6px 15px 0px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    color: rgba(128, 128, 128, 0.6);
+
+}
+.buytickets_box:hover {
+    background-color: rgba(89, 89, 89, 0.25); /* 背景颜色更明显 */
+    box-shadow: 
+        rgba(14, 14, 14, 0.3) 0px 8px 20px 0px,  /* 原始阴影增强 */
+        0 0 20px rgba(255, 255, 255, 0.3),      /* 白色外发光 */
+        0 0 40px rgba(255, 255, 255, 0.2);      /* 更远的柔光 */
+  
+    transition: all 0.3s ease-in-out;
+}
+
+.left_box {
+    width: 15%;
+    height: 90%;
+    margin-left: 10px;
+
+}
+
+.list_item {
+  
+    display: flex;
+    flex-direction: column;
+}
+
+.list_item>a {
+    margin-left: 20px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 20px;
+    color: yellow;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    flex-direction: column;
+}
+
+.list_item>a:hover {
+    transform: scale(1.1);
+    color: skyblue;
+    cursor: pointer;
+}
+.middle_box { 
+
+}
