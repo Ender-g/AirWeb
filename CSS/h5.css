@@ -1,0 +1,65 @@
+.cooperation-content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+     background-color: rgba(89, 89, 89, 0.15);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 0.8px solid rgba(255, 255, 255, 0.18);
+    box-shadow: rgba(14, 14, 14, 0.19) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(14, 14, 14, 0.19) 0px 6px 15px 0px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    color: rgba(128, 128, 128, 0.6);
+}
+.contact-form input,
+.contact-form textarea {
+    color: #333; 
+}
+.banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.introduction, .ways-to-cooperate, .contact-form {
+    margin-top: 30px;
+}
+
+.introduction h2, .ways-to-cooperate h2, .contact-form h2 {
+    font-size: 30px;
+    color: yellow;
+    margin-bottom: 5px;
+}
+
+.ways-to-cooperate ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
