@@ -48,7 +48,9 @@
     align-items: center;
     padding-right: 50px;
 }
-
+.top-btn{
+    width: 150px;
+}
 .top-box-middle {
     width: 10%;
     display: flex;

@@ -1,22 +1,17 @@
 let jsonurl; // json文件路径
 
+
 // 请求热门电影轮播图json文件
-jsonurl = "../JSON/popular_movies.json"
-request = new XMLHttpRequest();
-request.open("GET", jsonurl, false);
-request.send(null);
-data_popular_movies = JSON.parse(request.responseText);
-// console.log(data_popular_movies);
-request = null;
+axios.get("../JSON/popular_movies.json").then(function (response) {
+    data_popular_movies = response.data;
+    console.log(data_popular_movies);
+});
 
 // 请求top10电影列表json文件
-jsonurl = "../JSON/top10.json"
-request = new XMLHttpRequest();
-request.open("GET", jsonurl, false);
-request.send(null);
-var data_top10_list = JSON.parse(request.responseText);
-// console.log(data_top10_list);
-request = null;
+axios.get("../JSON/top10.json").then(function (response) {
+    data_top10_list = response.data;
+    console.log(data_top10_list);
+});
 
 window.onload = function () {
     // top10电影列表
