@@ -1,0 +1,15 @@
+/* vip充值 */
+.vip-recharge{
+    background-color: aliceblue;
+    margin: 20px auto;
+    width: 80%;
+    min-width: 1000px;
+    max-width: 1100px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* vip权益 */
+.vip-right{}
