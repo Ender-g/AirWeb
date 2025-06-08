@@ -17,16 +17,19 @@
     border-radius: 25px;
     -webkit-border-radius: 25px;
     color: rgba(128, 128, 128, 0.6);
-
-}
-.buytickets_box:hover {
-    background-color: rgba(89, 89, 89, 0.25); /* 背景颜色更明显 */
-    box-shadow: 
-        rgba(14, 14, 14, 0.3) 0px 8px 20px 0px,  /* 原始阴影增强 */
-        0 0 20px rgba(255, 255, 255, 0.3),      /* 白色外发光 */
-        0 0 40px rgba(255, 255, 255, 0.2);      /* 更远的柔光 */
-  
     transition: all 0.3s ease-in-out;
+}
+
+.buytickets_box:hover {
+    background-color: rgba(89, 89, 89, 0.25);
+    /* 背景颜色更明显 */
+    box-shadow:
+        rgba(14, 14, 14, 0.3) 0px 8px 20px 0px,
+        /* 原始阴影增强 */
+        0 0 20px rgba(255, 255, 255, 0.3),
+        /* 白色外发光 */
+        0 0 40px rgba(255, 255, 255, 0.2);
+    /* 更远的柔光 */
 }
 
 .left_box {
@@ -37,12 +40,12 @@
 }
 
 .list_item {
-  
+
     display: flex;
     flex-direction: column;
 }
 
-.list_item>a {
+.list_item>div {
     margin-left: 20px;
     width: 100%;
     height: 10%;
@@ -56,11 +59,68 @@
     flex-direction: column;
 }
 
-.list_item>a:hover {
+.list_item>div:hover {
     transform: scale(1.1);
     color: skyblue;
     cursor: pointer;
 }
-.middle_box { 
 
+.main-panel {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+
+.main-panel>.middle-box {
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-1-topbox,
+.btn-1-bottombox {
+    width: 100%;
+}
+
+.btn-1-topbox {
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.btn-1-bottombox {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.in-shopping-trolley {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.in-shopping-trolley>img {
+    margin: 20px;
+    height: 100%;
+}
+
+.in-shopping-trolley>div {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.btn{
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
 }
