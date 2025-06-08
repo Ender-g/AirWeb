@@ -4,20 +4,17 @@ let jsonurl; // json文件路径
 // 请求热门电影轮播图json文件
 axios.get("../JSON/popular_movies.json").then(function (response) {
     data_popular_movies = response.data;
-    console.log(data_popular_movies);
 });
 
 // 请求top10电影列表json文件
 axios.get("../JSON/top10.json").then(function (response) {
     data_top10_list = response.data;
-    console.log(data_top10_list);
 });
 
 window.onload = function () {
     // top10电影列表
     let top10_half_1 = document.getElementById('top10-half-1');
     let top10_half_2 = document.getElementById('top10-half-2');
-    console.log(top10_half_1, top10_half_2);
 
     top10_half_1.innerHTML = generateTop10HTML(data_top10_list, 0, 5);
     top10_half_2.innerHTML = generateTop10HTML(data_top10_list, 5, 10);
@@ -44,15 +41,33 @@ window.onload = function () {
 
     // 轮播图
     let popular_movies_img = document.getElementById('one_by_one_img'); // 图片
+    console.log(popular_movies_img);
+    
     let popular_movies_left_box = document.getElementById('show-box-left'); // 左盒子
     let popular_movies_left_btn = document.getElementById('switch-left-btn'); // 左边按钮
     let popular_movies_right_btn = document.getElementById('switch-right-btn'); // 右边按钮
 
     let index = 0; // 索引
     let timer = null; // 定时器
+    let imgurls = [];
 
-    // 播放第一张图片
-    popular_movies_img.src = data_popular_movies[0].imgurl;
+    // 轮播图图片
+    for (let i = 0; i < data_popular_movies.length; i++) {
+        imgurls[i] = data_popular_movies[i].imgurl;
+    }
+    // 轮播图图片（不可见）
+    for (let i = 0; i < imgurls.length; i++) {
+        popular_movies_img.innerHTML += `
+          <a href="#">
+            <img src="${imgurls[i]}" alt="" />
+          </a>
+        `;
+    }
+    
+
+    // 第一部电影的内容
+    // 将第一个a标签可见
+    popular_movies_img.children[0].style.display = 'block';
     popular_movies_left_box.innerHTML = `
         <div><span>电影名称：</span>${data_popular_movies[0].电影名称}</div>
         <div><span>标签：</span>${data_popular_movies[0].标签}</div>
@@ -98,12 +113,15 @@ window.onload = function () {
             function () {
                 index == data_popular_movies.length - 1 ? index = 0 : index++;
                 play();
-            }, 2000);
+            }, 1500);
     }
 
     // 切换内容方法
     function play() {
-        popular_movies_img.src = data_popular_movies[index].imgurl;
+        for (let i = 0; i < popular_movies_img.children.length; i++) {
+            popular_movies_img.children[i].style.display = 'none';
+        }
+        popular_movies_img.children[index].style.display = 'block';
         popular_movies_left_box.innerHTML = `
         <div><span>电影名称：</span>${data_popular_movies[index].电影名称}</div>
         <div><span>标签：</span>${data_popular_movies[index].标签}</div>

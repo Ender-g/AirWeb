@@ -37,22 +37,18 @@
 .card-1 {
   background-color: #292F39;
   border-radius: 1rem;
-  border: #292F39 0.2rem solid;
   transition: all 0.2s ease-in;
   box-shadow: 0.4rem 0.4rem 0.6rem #00000040;
 }
 
 .card-1:hover {
   transform: rotate(5deg);
-  border: #fffffff0 0.2em solid;
   box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 20px 0px;
   border-radius: 1rem;
 }
 
 .card-1:active {
   transform: rotate(0deg);
-  border: rgb(200, 255, 0) 0.2em solid;
-  box-shadow: rgba(200, 255, 0, 0.5) 0px 0px 20px 0px;
   border-radius: 1rem;
 }
 

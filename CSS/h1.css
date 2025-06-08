@@ -83,14 +83,21 @@
     height: 100%;
 }
 
-.right-box>.img-box>a {
+.right-box>.img-box>div {
     position: absolute;
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.right-box>.img-box>a>img {
+.right-box>.img-box>div>a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.right-box>.img-box>div>a>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -166,7 +173,7 @@
     transition: all 0.5s;
 }
 
-.about-top10>.title:hover  {
+.about-top10>.title:hover {
     color: yellow;
     transform: scale(1.2) rotate(30deg);
     cursor: pointer;
@@ -194,10 +201,12 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.about-top10>.text-box>div{
+
+.about-top10>.text-box>div {
     font-size: 20px;
     transition: all 0.5s;
 }
+
 .about-top10>.text-box>div>span {
     font-weight: bold;
     font-size: 20px;
