@@ -1,6 +1,6 @@
 .about-box {
     width: 800px;
-    margin: 200px auto;
+    margin: 150px auto;
     display: flex;
     transform: scale(1.5);
     justify-content: space-evenly;
@@ -141,12 +141,15 @@
     margin-bottom: 10px;
 }
 
-.content>a {
+.content>a,
+.content>h2 {
     margin: 10px;
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
-.content>a:hover {
+.content>a:hover,
+.content>h2:hover {
     color: skyblue;
 }
 
