@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "3176643",
+      "name": "GitHub",
+      "font_class": "GitHub",
+      "unicode": "ea09",
+      "unicode_decimal": 59913
+    },
+    {
+      "icon_id": "16745321",
+      "name": "bilibili",
+      "font_class": "bilibili",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
       "icon_id": "6638082",
       "name": "我的VIP",
       "font_class": "wodeVIP",
@@ -18,34 +32,6 @@
       "font_class": "sousuox",
       "unicode": "e625",
       "unicode_decimal": 58917
-    },
-    {
-      "icon_id": "331175",
-      "name": "car_more",
-      "font_class": "carmore",
-      "unicode": "e602",
-      "unicode_decimal": 58882
-    },
-    {
-      "icon_id": "3205015",
-      "name": "五角星",
-      "font_class": "wujiaoxing-",
-      "unicode": "e647",
-      "unicode_decimal": 58951
-    },
-    {
-      "icon_id": "3207533",
-      "name": "app图标-16",
-      "font_class": "apptubiao-",
-      "unicode": "e655",
-      "unicode_decimal": 58965
-    },
-    {
-      "icon_id": "3207534",
-      "name": "app图标-17",
-      "font_class": "apptubiao-1",
-      "unicode": "e656",
-      "unicode_decimal": 58966
     },
     {
       "icon_id": "6250624",
@@ -74,27 +60,6 @@
       "font_class": "jiantouyou",
       "unicode": "e715",
       "unicode_decimal": 59157
-    },
-    {
-      "icon_id": "6299291",
-      "name": "首页",
-      "font_class": "shouye",
-      "unicode": "e719",
-      "unicode_decimal": 59161
-    },
-    {
-      "icon_id": "6299292",
-      "name": "消息",
-      "font_class": "xiaoxi",
-      "unicode": "e71a",
-      "unicode_decimal": 59162
-    },
-    {
-      "icon_id": "6299298",
-      "name": "个人",
-      "font_class": "geren",
-      "unicode": "e71d",
-      "unicode_decimal": 59165
     },
     {
       "icon_id": "16017208",
