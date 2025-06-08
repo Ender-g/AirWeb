@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "6638082",
+      "name": "我的VIP",
+      "font_class": "wodeVIP",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
       "icon_id": "10408285",
       "name": "搜索 搜索框",
       "font_class": "sousuox",
