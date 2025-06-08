@@ -9,7 +9,7 @@ Promise.all([
     data_top10_list = top10Res.data;
 
     // 将window.onload移到Promise回调内部，确保数据就绪后再绑定事件
-    window.onload = function () {
+    // window.onload = function () {
 
         // top10电影列表
         let top10_half_1 = document.getElementById('top10-half-1');
@@ -122,7 +122,7 @@ Promise.all([
         <div><span>编剧：</span>${data_popular_movies[index].编剧}</div>
         `;
         }
-    };
+    // };
 }).catch(function (error) {
     console.error('请求失败:', error);
 });
