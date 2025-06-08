@@ -29,5 +29,7 @@ window.onload = function () {
       }
       return html;
     }
-  });
+  }).catch(function (error) {
+    console.error('请求失败:', error);
+  });;
 }
