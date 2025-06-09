@@ -3,6 +3,12 @@
 ## 项目简介
 >这是一个基于静态资源的前端项目，包含完整的HTML/CSS/JS结构，主要用于展示多页面信息展示和交互功能。项目包含了基础页面模板、样式规范、动态交互以及数据可视化相关内容。
 
+## 第三方引用
+- iconfont图标库：[https://www.iconfont.cn/](https://www.iconfont.cn/)
+- CSS样式库：[https://www.lingdaima.com/](https://www.lingdaima.com/)
+- axios请求库：[https://github.com/axios/axios](https://github.com/axios/axios)
+- 得意黑字体：[https://github.com/atelier-anchor/smiley-sans](https://github.com/atelier-anchor/smiley-sans)
+
 ## 技术栈
 - 基础技术：HTML5 + CSS3 + JavaScript
 - 样式增强：iconfont图标库、公共样式表（public.css）
