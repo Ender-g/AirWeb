@@ -83,6 +83,7 @@
 .search-input {
     padding-left: 10px;
     color: #292F39;
+    width: 200px;
     background: rgb(255, 255, 255);
     border-radius: 0.4em;
     box-shadow: 0.3em 0.3em 0.7em #00000015;
