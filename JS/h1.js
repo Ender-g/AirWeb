@@ -48,7 +48,7 @@ Promise.all([
 
     let index = 0; // 索引
     let timer = null; // 定时器
-    let imgurls = [];
+
 
     // 初始化
     for (let i = 0; i < data_popular_movies.length; i++) {
